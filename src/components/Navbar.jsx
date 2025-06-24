@@ -52,6 +52,12 @@ const Navbar = () => {
           </a>
         </div>
 
+        <div className="hidden md:flex space-x-4">
+          <button className="outlined-button">Login</button>
+          <button className="solid-button">Request a Demo</button>
+          <ToggleTheme></ToggleTheme>
+        </div>
+
         {/* Mobile nav */}
 
         <button
@@ -101,12 +107,11 @@ const Navbar = () => {
               pricing
             </a>
           </div>
-        </div>
-
-        <div className="hidden md:flex space-x-4">
-          <button className="outlined-button">Login</button>
-          <button className="solid-button">Request a Demo</button>
-          <ToggleTheme></ToggleTheme>
+          <div className="fixed bottom-16 flex space-x-6">
+            <button className="outlined-button text-xl">Login</button>
+            <button className="solid-button text-xl">Request a Demo</button>
+            <ToggleTheme></ToggleTheme>
+          </div>
         </div>
       </div>
     </nav>
