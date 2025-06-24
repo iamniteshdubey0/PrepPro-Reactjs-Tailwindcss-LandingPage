@@ -1,0 +1,64 @@
+import { Inspect } from "lucide-react";
+import React from "react";
+
+const Customers = () => {
+  return (
+    <section
+      id="customers"
+      className="relative h-full flex flex-col items-center justify-center px-4 py-8"
+    >
+      <div className="conatiner w-full mx-auto text-center z-10 space-y-8">
+        <h4 className="text-lg font-bold text-foreground/30 uppercase">
+          powering the worlds best compnaines
+        </h4>
+
+        <div className="border-t-2 border-b-2 space-y-4 py-6">
+          <div className="flex justify-around p-2 space-x-12">
+            <div className="flex items-center space-x-2 text-foreground/30">
+              <Inspect size={30}></Inspect>
+              <span className="text-xl font-bold">Google</span>
+            </div>
+
+            <div className="flex items-center space-x-2 text-foreground/30">
+              <Inspect size={30}></Inspect>
+              <span className="text-xl font-bold">Google</span>
+            </div>
+
+            <div className="flex items-center space-x-2 text-foreground/30">
+              <Inspect size={30}></Inspect>
+              <span className="text-xl font-bold">Google</span>
+            </div>
+
+            <div className="flex items-center space-x-2 text-foreground/30">
+              <Inspect size={30}></Inspect>
+              <span className="text-xl font-bold">Google</span>
+            </div>
+
+            <div className="flex items-center space-x-2 text-foreground/30">
+              <Inspect size={30}></Inspect>
+              <span className="text-xl font-bold">Google</span>
+            </div>
+            
+            <div className="flex items-center space-x-2 text-foreground/30">
+              <Inspect size={30}></Inspect>
+              <span className="text-xl font-bold">Google</span>
+            </div>
+
+            <div className="flex items-center space-x-2 text-foreground/30">
+              <Inspect size={30}></Inspect>
+              <span className="text-xl font-bold">Google</span>
+            </div>
+
+            <div className="flex items-center space-x-2 text-foreground/30">
+              <Inspect size={30}></Inspect>
+              <span className="text-xl font-bold">Google</span>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default Customers;
