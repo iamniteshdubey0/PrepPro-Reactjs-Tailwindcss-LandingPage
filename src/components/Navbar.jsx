@@ -20,12 +20,12 @@ const Navbar = () => {
         >
           <span>
             <Box size={24}></Box>
-            <span>PrepPro</span>
+            <span className="">PrepPro</span>
           </span>
         </a>
 
         {/* Destktop nav */}
-        <div className="hidden md:flex space-x-8 mr-4">
+        <div className="hidden md:flex space-x-4 lg:space-x-8 mr-4">
           <a
             href=""
             className="font-semibold text-foreground/80 hover:text-primary transition-colors duration-300"
@@ -63,7 +63,7 @@ const Navbar = () => {
         <button
           onClick={() => setIsMenuOpened((prev) => !prev)}
           aria-label={isMenuOpened ? "Close Menu" : "Open Menu"}
-          className="md:hidden p-2 text-foreground z-50"
+          className="md:hidden p-2 text-foreground z-50 cursor-pointer"
         >
           {isMenuOpened ? <X size={24}></X> : <Menu size={24}></Menu>}
         </button>
@@ -107,9 +107,9 @@ const Navbar = () => {
               pricing
             </a>
           </div>
-          <div className="fixed bottom-16 flex space-x-6">
-            <button className="outlined-button text-xl">Login</button>
-            <button className="solid-button text-xl">Request a Demo</button>
+          <div className="fixed bottom-16 flex space-x-4">
+            <button className="outlined-button text-md">Login</button>
+            <button className="solid-button text-md">Request a Demo</button>
             <ToggleTheme></ToggleTheme>
           </div>
         </div>

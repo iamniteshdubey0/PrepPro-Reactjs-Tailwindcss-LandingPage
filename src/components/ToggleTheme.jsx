@@ -32,7 +32,7 @@ const ToggleTheme = () => {
     <button
       onClick={handleToggleTheme}
       className={cn(
-        "fixed max-sm:hidden top-4 right-8 transition-colors duration-300",
+        "max-xs:hidden transition-colors duration-300",
         "foxus:outline-none cursor-pointer",
         "bg-primary/10 rounded-full p-3"
       )}
