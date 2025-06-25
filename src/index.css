@@ -86,7 +86,7 @@
     --foreground: 204, 100%, 7%, 1;
     /* rich black bg */
 
-    --card: 0 0% 100%;
+    --card: 155 75% 40%;
     /* white */
 
     --primary: 181 95% 16%;
@@ -104,8 +104,8 @@
     --foreground: 213 31% 91%;
     /* white bg */
 
-    --card: 222 47% 8%;
-    /* deep blue */
+    --card: 155 75% 30%;
+    /* dark green */
 
     --primary: 181deg 84.97% 29.6%;
     /* dark green */

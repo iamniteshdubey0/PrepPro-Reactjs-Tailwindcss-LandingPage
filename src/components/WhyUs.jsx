@@ -1,4 +1,5 @@
 import React from "react";
+import { cn } from "../lib/utils";
 
 const WhyUs = () => {
   return (
@@ -15,11 +16,21 @@ const WhyUs = () => {
           </div>
 
           <div className="flex md:flex-2/3 justify-center items-center gap-3">
-            <div className="flex flex-col justify-between rounded-2xl bg-primary/80 p-4 gap-6 md:w-40 md:h-40">
+            <div
+              className={cn(
+                "flex flex-col justify-between rounded-2xl border-1 border-card",
+                "bg-linear-to-b from-card shadow-2xl to-card/70 p-4 gap-6 md:w-40 md:h-40"
+              )}
+            >
               <span className="text-5xl">5k+</span>
               <p>organization trust</p>
             </div>
-            <div className="flex flex-col justify-between rounded-2xl bg-primary/80 p-4 gap-6 md:w-40 md:h-40">
+            <div
+              className={cn(
+                "flex flex-col justify-between rounded-2xl border-1",
+                "border-black/20 bg-linear-to-b shadow-2xl from-white/10 to-black/20 p-4 gap-6 md:w-40 md:h-40"
+              )}
+            >
               <span className="text-5xl">5k+</span>
               <p>organization trust</p>
             </div>
@@ -39,11 +50,21 @@ const WhyUs = () => {
           </div>
 
           <div className="flex md:flex-2/3 justify-center items-center gap-3">
-            <div className="flex flex-col justify-between rounded-2xl bg-primary/80 p-4 gap-6 md:w-40 md:h-40">
+            <div
+              className={cn(
+                "flex flex-col justify-between rounded-2xl border-1 border-card",
+                "bg-linear-to-b from-card/40 shadow-2xl to-card/80 p-4 gap-6 md:w-40 md:h-40"
+              )}
+            >
               <span className="text-5xl">5k+</span>
               <p>organization trust</p>
             </div>
-            <div className="flex flex-col justify-between rounded-2xl bg-primary/80 p-4 gap-6 md:w-40 md:h-40">
+            <div
+              className={cn(
+                "flex flex-col justify-between rounded-2xl border-1",
+                "border-black/20 bg-linear-to-b shadow-2xl from-white/10 to-black/20 p-4 gap-6 md:w-40 md:h-40"
+              )}
+            >
               <span className="text-5xl">5k+</span>
               <p>organization trust</p>
             </div>
