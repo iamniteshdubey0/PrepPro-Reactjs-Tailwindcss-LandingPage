@@ -9,7 +9,7 @@ const Hero = () => {
     >
       <div className="conatiner max-w-4x mx-auto text-center z-10">
         {/* Upper part */}
-        <div className="space-y-6 flex items-center justify-center relative z-0">
+        <div className="space-y-6 flex items-center justify-center relative z-0 mt-18">
           {/* background effect */}
           <div className="absolute border-1 border-primary/30 h-80 w-80 rounded-full flex justify-center items-center opacity-60">
             <div className="border-1 border-primary/40 h-50 w-50 rounded-full"></div>
