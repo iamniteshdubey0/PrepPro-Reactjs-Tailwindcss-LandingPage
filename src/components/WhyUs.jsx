@@ -4,7 +4,7 @@ import { cn } from "../lib/utils";
 const WhyUs = () => {
   return (
     <section id="whyus" className="p-2 md:py-8 md:px-4 relative">
-      <div className="container mx-auto space-y-24">
+      <div className="container mx-auto space-y-24 ">
         {/* background grid effect */}
         <div
           className="absolute inset-0 z-0 max-sm:hidden"
@@ -55,17 +55,17 @@ const WhyUs = () => {
 
         <div className="flex flex-col md:flex-row items-start md:my-8 md:py-8 space-y-4">
           <div className="md:flex-2/3">
-            <p className="text-foreground/70 text-xl font-semibold capitalize md:w-2xl">
+            <p className="text-foreground/70 text-xl font-semibold capitalize md:w-2/3">
               Lorem ipsum dolor sit amet consectetur, adipisicing elit. Fuga,
               vel?
             </p>
-            <p className="text-foreground/70 text-xl font-semibold capitalize md:w-2xl">
+            <p className="text-foreground/70 text-xl font-semibold capitalize md:w-2/3">
               Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ullam
               provident neque minima
             </p>
           </div>
 
-          <div className="flex md:flex-2/3 justify-center items-center gap-3">
+          <div className="flex md:flex-1/3 justify-center items-center gap-3">
             <div
               className={cn(
                 "flex flex-col justify-between rounded-2xl border-1 border-card",

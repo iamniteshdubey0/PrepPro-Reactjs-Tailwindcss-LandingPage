@@ -3,6 +3,7 @@ import Navbar from "../components/Navbar";
 import Hero from "../components/Hero";
 import Customers from "../components/Customers";
 import WhyUs from "../components/WhyUs";
+import Productivity from "../components/Productivity";
 
 const Home = () => {
   return (
@@ -16,6 +17,7 @@ const Home = () => {
       <Hero></Hero>
       <Customers></Customers>
       <WhyUs></WhyUs>
+      <Productivity></Productivity>
       {/* footer */}
     </div>
   );
