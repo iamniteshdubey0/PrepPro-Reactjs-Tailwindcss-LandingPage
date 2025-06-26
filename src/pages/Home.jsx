@@ -5,6 +5,7 @@ import Customers from "../components/Customers";
 import WhyUs from "../components/WhyUs";
 import Productivity from "../components/Productivity";
 import Features from "../components/Features";
+import Testimonials from "../components/Testimonials";
 
 const Home = () => {
   return (
@@ -20,6 +21,7 @@ const Home = () => {
       <WhyUs></WhyUs>
       <Productivity></Productivity>
       <Features></Features>
+      <Testimonials></Testimonials>
       {/* footer */}
     </div>
   );
