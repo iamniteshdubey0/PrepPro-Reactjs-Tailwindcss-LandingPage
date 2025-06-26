@@ -1,5 +1,6 @@
 import React from "react";
 import { cn } from "../lib/utils";
+import { Boxes } from "lucide-react";
 
 const Productivity = () => {
   return (
@@ -45,7 +46,7 @@ const Productivity = () => {
                   />
                 </div>
                 <div className="p-4 text-left space-y-2">
-                  <h1 className="text-2xl text-primary font-semibold">
+                  <h1 className="text-2xl text-primary/80 font-semibold">
                     OKRs & Golas
                   </h1>
                   <p className="text-xs text-foreground/70 font-semibold">
@@ -59,7 +60,7 @@ const Productivity = () => {
               {/* Top Right */}
               <div className="px-4 py-2 flex md:row-span-1 md:col-span-2 rounded-xl bg-gradient-to-b from-white/20 to-black/10 shadow-xs  h-full">
                 <div className="p-4 text-left space-y-2 flex-1">
-                  <h1 className="text-2xl text-primary font-semibold">
+                  <h1 className="text-2xl text-primary/80 font-semibold">
                     Analytics
                   </h1>
                   <p className="text-xs text-foreground/70 font-semibold">
@@ -80,7 +81,7 @@ const Productivity = () => {
               {/* Bottom Right 1 */}
               <div className="rounded-xl bg-gradient-to-b from-white/20 to-black/10 shadow-xs  p-4 h-full space-y-4">
                 <div className="p-4 text-left space-y-2">
-                  <h1 className="text-2xl text-primary font-semibold">
+                  <h1 className="text-2xl text-primary/80 font-semibold">
                     OKRs & Golas
                   </h1>
                   <p className="text-xs text-foreground/70 font-semibold">
@@ -99,7 +100,12 @@ const Productivity = () => {
               </div>
 
               {/* Bottom Right 2 */}
-              <div className="rounded-xl bg-gradient-to-b from-white/20 to-black/10 shadow-xs  p-4 h-full"></div>
+              <div className="rounded-xl bg-gradient-to-b from-primary to-primary/80 shadow-xs p-4 h-full space-y-4">
+                <h2 className="text-4xl text-background/80">Reduced Turnover 28%</h2>
+                <div className="text-background/60 flex justify-end">
+                  <Boxes size={66}></Boxes>
+                </div>
+              </div>
             </div>
           </div>
         </div>

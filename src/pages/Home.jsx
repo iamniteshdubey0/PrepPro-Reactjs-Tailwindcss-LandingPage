@@ -4,6 +4,7 @@ import Hero from "../components/Hero";
 import Customers from "../components/Customers";
 import WhyUs from "../components/WhyUs";
 import Productivity from "../components/Productivity";
+import Features from "../components/Features";
 
 const Home = () => {
   return (
@@ -18,6 +19,7 @@ const Home = () => {
       <Customers></Customers>
       <WhyUs></WhyUs>
       <Productivity></Productivity>
+      <Features></Features>
       {/* footer */}
     </div>
   );
