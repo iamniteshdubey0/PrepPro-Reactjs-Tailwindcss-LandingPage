@@ -16,14 +16,14 @@ const Testimonials = () => {
           Workspace
         </h2>
       </div>
-      <div className="flex items-center justify-center gap-6 my-12 overflow-hidden">
+      <div className="flex flex-row items-center justify-center gap-6 my-12 overflow-hidden">
         {testimonials.map((key) => (
           <div key={key} className="space-y-2">
             <div
               className={cn(
                 "flex justify-start gap-4",
-                "w-35 h-80 hover:border-1 border-primary rounded-xl",
-                "hover:w-110 transition-all duration-300 cursor-pointer hover:p-3 hover:shadow-md",
+                "w-30 h-30 md:w-35 md:h-80 hover:border-1 border-primary rounded-xl",
+                "hover:w-110 transition-all duration-400 cursor-pointer hover:p-3 hover:shadow-md",
                 "hover:bg-primary text-foreground"
               )}
             >

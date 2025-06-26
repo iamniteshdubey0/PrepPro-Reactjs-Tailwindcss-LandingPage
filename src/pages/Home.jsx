@@ -6,6 +6,7 @@ import WhyUs from "../components/WhyUs";
 import Productivity from "../components/Productivity";
 import Features from "../components/Features";
 import Testimonials from "../components/Testimonials";
+import Integrations from "../components/Integration";
 
 const Home = () => {
   return (
@@ -22,6 +23,7 @@ const Home = () => {
       <Productivity></Productivity>
       <Features></Features>
       <Testimonials></Testimonials>
+      <Integrations></Integrations>
       {/* footer */}
     </div>
   );
