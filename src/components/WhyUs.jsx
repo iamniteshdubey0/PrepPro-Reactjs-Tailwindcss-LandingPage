@@ -11,7 +11,7 @@ const WhyUs = () => {
           style={{
             backgroundImage: `
       linear-gradient(to right, rgba(0,0,0,0.05) 1px, transparent 1px),
-      linear-gradient(to bottom, rgba(0,0,0,0.05) 1px, transparent 1px)
+      linear-gradient(to bottom, rgb a(0,0,0,0.05) 1px, transparent 1px)
     `,
             backgroundSize: "100px 100px",
             WebkitMaskImage:
@@ -35,7 +35,7 @@ const WhyUs = () => {
             <div
               className={cn(
                 "flex flex-col justify-between rounded-2xl border-1 border-card",
-                "bg-linear-to-b from-card shadow-2xl to-card/70 p-4 gap-6 md:w-40 md:h-40"
+                "bg-linear-to-b from-primary/40 shadow-2xl to-primary/30 p-4 gap-6 md:w-40 md:h-40"
               )}
             >
               <span className="text-5xl">5k+</span>
@@ -69,7 +69,7 @@ const WhyUs = () => {
             <div
               className={cn(
                 "flex flex-col justify-between rounded-2xl border-1 border-card",
-                "bg-linear-to-b from-card/40 shadow-2xl to-card/80 p-4 gap-6 md:w-40 md:h-40"
+                "bg-linear-to-b rom-primary/30 shadow-2xl to-primary/20 p-4 gap-6 md:w-40 md:h-40"
               )}
             >
               <span className="text-5xl">5k+</span>

@@ -7,6 +7,7 @@ import Productivity from "../components/Productivity";
 import Features from "../components/Features";
 import Testimonials from "../components/Testimonials";
 import Integrations from "../components/Integration";
+import Tools from "../components/Tools";
 
 const Home = () => {
   return (
@@ -24,6 +25,7 @@ const Home = () => {
       <Features></Features>
       <Testimonials></Testimonials>
       <Integrations></Integrations>
+      <Tools></Tools>
       {/* footer */}
     </div>
   );
