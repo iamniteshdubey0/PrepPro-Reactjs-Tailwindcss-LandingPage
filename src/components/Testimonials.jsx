@@ -1,7 +1,7 @@
 import React from "react";
 import { cn } from "../lib/utils";
 
-const testimonials = [1,2,3,4,5]
+const testimonials = [1, 2, 3, 4, 5];
 
 const Testimonials = () => {
   return (
@@ -16,19 +16,19 @@ const Testimonials = () => {
           Workspace
         </h2>
       </div>
-      <div className="flex flex-row items-center justify-center gap-6 my-12 overflow-hidden">
+      <div className="flex max-md:flex-col flex-row items-center justify-center gap-6 my-12 overflow-hidden">
         {testimonials.map((key) => (
           <div key={key} className="space-y-2">
             <div
-              className={cn(
-                "flex justify-start gap-4",
-                "w-30 h-30 md:w-35 md:h-80 hover:border-1 border-primary rounded-xl",
-                "hover:w-110 transition-all duration-400 cursor-pointer hover:p-3 hover:shadow-md",
-                "hover:bg-primary text-foreground"
+              className={cn( 
+                "flex max-sm:flex-col flex-row justify-start gap-4 overflow-hidden",
+                "max-sm:w-full max-sm:h-35 w-35 h-80 hover:border-1 border-primary rounded-xl",
+                "max-sm:active:h-80  hover:w-110 transition-all duration-400 cursor-pointer hover:p-3 active:p-3 hover:shadow-md",
+                "active:shadow-md active:bg-primary hover:bg-primary text-foreground"
               )}
             >
               <img
-                className="grayscale w-34 h-full rounded-lg object-cover"
+                className="grayscale w-full h-35 md:w-34 md:h-full rounded-lg object-cover"
                 src="https://random.imagecdn.app/300/400"
                 alt=""
               />
