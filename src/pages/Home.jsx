@@ -8,6 +8,7 @@ import Features from "../components/Features";
 import Testimonials from "../components/Testimonials";
 import Integrations from "../components/Integration";
 import Tools from "../components/Tools";
+import Summary from "../components/summary";
 
 const Home = () => {
   return (
@@ -26,6 +27,7 @@ const Home = () => {
       <Testimonials></Testimonials>
       <Integrations></Integrations>
       <Tools></Tools>
+      <Summary></Summary>
       {/* footer */}
     </div>
   );
