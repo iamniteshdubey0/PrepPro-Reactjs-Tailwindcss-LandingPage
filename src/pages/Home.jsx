@@ -9,6 +9,7 @@ import Testimonials from "../components/Testimonials";
 import Integrations from "../components/Integration";
 import Tools from "../components/Tools";
 import Summary from "../components/summary";
+import Newsletter from "../components/Newsletter";
 
 const Home = () => {
   return (
@@ -28,6 +29,7 @@ const Home = () => {
       <Integrations></Integrations>
       <Tools></Tools>
       <Summary></Summary>
+      <Newsletter> </Newsletter>
       {/* footer */}
     </div>
   );
