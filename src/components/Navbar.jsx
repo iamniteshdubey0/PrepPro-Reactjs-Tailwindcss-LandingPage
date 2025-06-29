@@ -1,7 +1,8 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { cn } from "../lib/utils";
-import { Box, Menu, X } from "lucide-react";
+import { Menu, X } from "lucide-react";
 import ToggleTheme from "./ToggleTheme";
+import { NavrbarItems } from "../constants/Constant";
 
 const Navbar = () => {
   const [isMenuOpened, setIsMenuOpened] = useState(false);
@@ -19,37 +20,22 @@ const Navbar = () => {
           className="text-2xl font-bold text-primary flex items-center"
         >
           <span>
-            <Box size={24}></Box>
-            <span className="">PrepPro</span>
+            {NavrbarItems.brand.logo}
+            <span className="">{NavrbarItems.brand.name}</span>
           </span>
         </a>
 
         {/* Destktop nav */}
         <div className="hidden md:flex space-x-4 lg:space-x-8 mr-4">
-          <a
-            href=""
-            className="font-semibold text-foreground/80 hover:text-primary transition-colors duration-300"
-          >
-            Platform
-          </a>
-          <a
-            href=""
-            className="font-semibold text-foreground/80 hover:text-primary transition-colors duration-300"
-          >
-            Solutions
-          </a>
-          <a
-            href=""
-            className="font-semibold text-foreground/80 hover:text-primary transition-colors duration-300"
-          >
-            Resources
-          </a>
-          <a
-            href=""
-            className="font-semibold text-foreground/80 hover:text-primary transition-colors duration-300"
-          >
-            pricing
-          </a>
+          {NavrbarItems.navlinks.map((items, key) => (
+            <a
+              key={key}
+              href={items.link}
+              className="font-semibold text-foreground/80 hover:text-primary transition-colors duration-300 capitalize"
+            >
+              {items.label}
+            </a>
+          ))}
         </div>
 
         <div className="hidden md:flex space-x-4">
@@ -67,6 +53,7 @@ const Navbar = () => {
         >
           {isMenuOpened ? <X size={24}></X> : <Menu size={24}></Menu>}
         </button>
+
         <div
           className={cn(
             "fixed h-screen inset-0 bg-background/95 backdrop-blur-md",
@@ -78,35 +65,18 @@ const Navbar = () => {
           )}
         >
           <div className="flex flex-col space-y-8 text-xl">
-            <a
-              href=""
-              className="font-semibold text-foreground/80 hover:text-primary transition-colors duration-300"
-              onClick={() => setIsMenuOpened(false)}
-            >
-              Platform
-            </a>
-            <a
-              href=""
-              className="font-semibold text-foreground/80 hover:text-primary transition-colors duration-300"
-              onClick={() => setIsMenuOpened(false)}
-            >
-              Solutions
-            </a>
-            <a
-              href=""
-              className="font-semibold text-foreground/80 hover:text-primary transition-colors duration-300"
-              onClick={() => setIsMenuOpened(false)}
-            >
-              Resources
-            </a>
-            <a
-              href=""
-              className="font-semibold text-foreground/80 hover:text-primary transition-colors duration-300"
-              onClick={() => setIsMenuOpened(false)}
-            >
-              pricing
-            </a>
+            {NavrbarItems.navlinks.map((item, key) => (
+              <a
+                key={key}
+                href={item.link}
+                className="font-semibold text-foreground/80 hover:text-primary transition-colors duration-300 capitalize"
+                onClick={() => setIsMenuOpened(false)}
+              >
+                {item.label}
+              </a>
+            ))}
           </div>
+
           <div className="fixed bottom-16 flex space-x-4">
             <button className="outlined-button text-md">Login</button>
             <button className="solid-button text-md">Request a Demo</button>

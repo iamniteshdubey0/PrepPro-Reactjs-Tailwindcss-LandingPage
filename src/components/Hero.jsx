@@ -1,5 +1,4 @@
-import { Inspect, Linkedin } from "lucide-react";
-import React from "react";
+import { HeroItems } from "../constants/Constant";
 
 const Hero = () => {
   return (
@@ -21,8 +20,8 @@ const Hero = () => {
             {/* Left Avatar */}
             <div className="absolute top-1/2 left-1/2 transform -translate-x-[130px] -translate-y-[50px] z-0">
               <img
-                src="https://randomuser.me/api/portraits/men/12.jpg"
-                alt="left-avatar"
+                src={HeroItems.images[0].url}
+                alt={HeroItems.images[0].position}
                 className="w-24 h-24 rounded-full grayscale border-4 border-white object-cover shadow"
               />
             </div>
@@ -30,8 +29,8 @@ const Hero = () => {
             {/* Center Avatar */}
             <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-10">
               <img
-                src="https://randomuser.me/api/portraits/men/32.jpg"
-                alt="center-avatar"
+                src={HeroItems.images[1].url}
+                alt={HeroItems.images[1].position}
                 className="w-30 h-30 rounded-full border-4 border-white object-cover shadow-lg"
               />
             </div>
@@ -39,8 +38,8 @@ const Hero = () => {
             {/* Right Avatar */}
             <div className="absolute top-1/2 left-1/2 transform translate-x-[40px] -translate-y-[50px] z-0">
               <img
-                src="https://randomuser.me/api/portraits/women/45.jpg"
-                alt="right-avatar"
+                src={HeroItems.images[2].url}
+                alt={HeroItems.images[2].position}
                 className="w-24 h-24 rounded-full grayscale border-4 border-white object-cover shadow"
               />
             </div>
@@ -49,19 +48,19 @@ const Hero = () => {
 
         {/* Middle part */}
         <div className="space-y-6 z-10 mt-4">
-          <h1 className="text-4x md:text-6xl font-bold tracking-tight">
-            <span className="opacity-0 animate-fade-in">The </span>
+          <h1 className="text-4xl md:text-6xl font-bold tracking-tight">
+            <span className="opacity-0 animate-fade-in">
+              {HeroItems.heading.text1}
+            </span>
             <span className="text-primary opacity-0 animate-fade-in-delay-1">
-              HR
+              {HeroItems.heading.text2}
             </span>
             <span className="text-gradient ml-2 opacity-0 animate-fade-in-delay-2">
-              Platform
+              {HeroItems.heading.text3}
             </span>
           </h1>
           <p className="text-lg md:text-xl text-foreground/60 max-w-xl mx-auto opacity-0 animate-fade-in-delay-3">
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ex optio
-            fugit eos porro rem asperiores illo cupiditate esse eveniet expedita
-            aut, nostrum adipisci quo corporis unde maxime amet
+            {HeroItems.desc}
           </p>
 
           <div className=" pt-4 opacity-0 animate-fade-in-delay-4">
@@ -70,24 +69,19 @@ const Hero = () => {
             </a>
           </div>
           <div className="flex justify-center mt-12 p-2 space-x-8">
-            <div className="flex items-center space-x-2 text-foreground/60">
-              <span className="text-sm font-semibold">4.2 on LinkedIn</span>
-              <span className="p-2 bg-primary/10 rounded-full">
-                <Inspect size={16}></Inspect>
-              </span>
-            </div>
-
-            <div className="flex items-center space-x-2 text-foreground/60">
-              <span className="text-sm font-semibold">4.2 on LinkedIn</span>
-              <span className="p-2 bg-primary/10 rounded-full">
-                <Inspect size={16}></Inspect>
-              </span>
-            </div>
+            {HeroItems.ratings.map((item, key) => (
+              <div
+                key={key}
+                className="flex items-center space-x-2 text-foreground/50"
+              >
+                <span className="text-sm font-semibold">{item.text}</span>
+                <span className="bg-primary/10 rounded-full p-2 flex justify-center items-center">
+                  {item.icon}
+                </span>
+              </div>
+            ))}
           </div>
         </div>
-
-
-
       </div>
     </section>
   );
