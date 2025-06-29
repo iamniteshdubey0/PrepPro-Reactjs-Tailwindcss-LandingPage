@@ -1,7 +1,6 @@
 import React from "react";
 import { cn } from "../lib/utils";
-
-const testimonials = [1, 2, 3, 4, 5];
+import { TestimonialsItems } from "../constants/Constant";
 
 const Testimonials = () => {
   return (
@@ -9,18 +8,22 @@ const Testimonials = () => {
       {/* Text Content */}
       <div className="relative z-10 mt-8 text-center px-4">
         <p className="text-xs text-primary font-medium tracking-wide">
-          HireSphere People Platform
+          {TestimonialsItems.heading.subTitle}
         </p>
         <h2 className="text-2xl md:text-3xl font-semibold text-foreground mt-2">
-          Built to Power Your Entire <br />
-          Workspace
+          {TestimonialsItems.heading.title.split("\n").map((line, i) => (
+            <React.Fragment key={i}>
+              {line}
+              <br></br>
+            </React.Fragment>
+          ))}
         </h2>
       </div>
       <div className="flex max-md:flex-col flex-row items-center justify-center gap-6 my-12 overflow-hidden">
-        {testimonials.map((key) => (
+        {TestimonialsItems.reviews.map((item, key) => (
           <div key={key} className="space-y-2">
             <div
-              className={cn( 
+              className={cn(
                 "flex max-sm:flex-col flex-row justify-start gap-4 overflow-hidden",
                 "max-sm:w-full max-sm:h-35 w-35 h-80 hover:border-1 border-primary rounded-xl",
                 "max-sm:active:h-80  hover:w-110 transition-all duration-400 cursor-pointer hover:p-3 active:p-3 hover:shadow-md",
@@ -29,28 +32,23 @@ const Testimonials = () => {
             >
               <img
                 className="grayscale w-full h-35 md:w-34 md:h-full rounded-lg object-cover"
-                src="https://random.imagecdn.app/300/400"
-                alt=""
+                src={item.imgUrl}
+                alt={item.name}
               />
 
               <div className="flex flex-col justify-between gap-4">
-                <p className="text-background/80 text-sm">
-                  "Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Porro, dolores voluptate molestias et labore reprehenderit
-                  rerum amet iusto earum quaerat."
-                </p>
+                <p className="text-background/80 text-sm">{item.note}</p>
 
                 <div className="space-y-0">
                   <p className="text-background/80 text-sm font-semibold mb-0">
-                    Nitesh Dubey
+                    {item.name}
                   </p>
                   <span className="text-background/80 text-xs font-semibold">
-                    Lorem ipsum dolor sit amet.
+                    {item.degisnation}
                   </span>
                 </div>
               </div>
             </div>
-            <p className="text-sm font-semibold text-foreground">Excecutives</p>
           </div>
         ))}
       </div>

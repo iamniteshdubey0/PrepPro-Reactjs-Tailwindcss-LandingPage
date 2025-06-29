@@ -10,7 +10,7 @@ const WhyUs = () => {
         <div
           className="absolute inset-0 z-0 max-sm:hidden"
           style={{
-            backgroundImage: `linear-gradient(to right, rgba(0,0,0,0.15) 1px, transparent 1px),linear-gradient(to bottom, rgba(0,0,0,0.15) 1px, transparent 1px)`,
+            backgroundImage: `linear-gradient(to right, rgba(0,0,0,0.12) 1px, transparent 1px),linear-gradient(to bottom, rgba(0,0,0,0.12) 1px, transparent 1px)`,
             backgroundSize: "150px 150px",
             WebkitMaskImage:
               "linear-gradient(to right, black 60%, transparent 60%)",

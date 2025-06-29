@@ -1,6 +1,6 @@
-import React from "react";
-import { cn } from "../lib/utils";
 import { Cake } from "lucide-react";
+import React from "react";
+import { FeaturesItems } from "../constants/Constant";
 
 const Features = () => {
   return (
@@ -25,47 +25,40 @@ const Features = () => {
       <div className="relative z-20 w-full max-w-[600px] h-[180px] flex items-center justify-center">
         <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-[100px] w-full max-w-[500px] h-[250px] rounded-b-full">
           {/* Icons manually positioned along arc */}
-          <div className="absolute top-[80%] left-[10%] transform -translate-x-1/2 -translate-y-1/2">
-            <IconBox />
-          </div>
-          <div className="absolute top-[55%] left-[25%] transform -translate-x-1/2 -translate-y-1/2">
-            <IconBox />
-          </div>
-          <div className="absolute top-[40%] left-[42%] transform -translate-x-1/2 -translate-y-1/2">
-            <IconBox />
-          </div>
-          <div className="absolute top-[40%] left-[58%] transform -translate-x-1/2 -translate-y-1/2">
-            <IconBox />
-          </div>
-          <div className="absolute top-[55%] left-[75%] transform -translate-x-1/2 -translate-y-1/2">
-            <IconBox />
-          </div>
-          <div className="absolute top-[80%] left-[90%] transform -translate-x-1/2 -translate-y-1/2">
-            <IconBox />
-          </div>
+
+          {FeaturesItems.featuresIcons.map((item, index) => (
+            <div
+              key={index}
+              className={`absolute top-[${item.position.top}] left-[${item.position.left}] transform -translate-x-1/2 -translate-y-1/2`}
+            >
+              <IconBox icon={FeaturesItems.featuresIcons[index].icon} />
+            </div>
+          ))}
         </div>
       </div>
 
       {/* Text Content */}
       <div className="relative z-10 mt-8 text-center px-4">
         <p className="text-sm text-primary font-medium tracking-wide">
-          HireSphere People Platform
+          {FeaturesItems.heading.subTitle}
         </p>
         <h2 className="text-2xl md:text-3xl font-semibold text-foreground mt-2">
-          Build An Operationally <br />
-          Excellent Company
+          {FeaturesItems.heading.title.split("\n").map((line, i) => (
+            <React.Fragment key={i}>
+              {line}
+              <br></br>
+            </React.Fragment>
+          ))}
         </h2>
-        <button className="solid-button my-4">
-          Discover Now
-        </button>
+        <button className="solid-button my-4">Discover Now</button>
       </div>
     </section>
   );
 };
 
-const IconBox = () => (
+const IconBox = ({ icon }) => (
   <div className="w-12 h-12 rounded-xl shadow-lg flex bg-primary/60 items-center justify-center">
-    <Cake></Cake>
+    {icon}
   </div>
 );
 
