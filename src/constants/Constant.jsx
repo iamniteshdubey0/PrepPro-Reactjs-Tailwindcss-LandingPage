@@ -68,3 +68,16 @@ export const ClientsItems = {
     { name: "Tata", icon: <TrainTrack size={30}></TrainTrack> },
   ],
 };
+
+export const WhyusItems = {
+  heading: {
+    title: `why\nChoose Us`,
+    desc: "Lorem ipsum dolor sit amet consectetur, adipisicing elit hjhg fbhewfyuewg fewc dcfhgu efge. Fuga Lorem ipsum dolor sit amet consectetur, adipisicing elit. Fuga",
+  },
+  feats: [
+    { value: "700+", label: "Students Cracked Interview", color:"from-primary/40 to-primary/30" },
+    { value: "50+", label: "Organizational Trust Us", color:"from-white/10 to-black/20" },
+    { value: "5000+", label: "Hrs of practise", color:"from-primary/30 to-primary/20" },
+    { value: "40+", label: "Proffesinals personal", color:"from-white/10 to-black/20" },
+  ],
+};

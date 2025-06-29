@@ -25,7 +25,7 @@ const Newsletter = () => {
               <input className="md:w-2/3 w-full border-0 bg-foreground/10 py-3 px-4 rounded-md focus:outline-0" type="email" name="subscribe" id="subscribe" />
             </div>
 
-            <button className="py-2 px-3 flex justify-center items-center bg-primary/30 rounded-md">Subscribe</button>
+            <button className="outlined-button">Subscribe</button>
           </form>
           <p className="text-xs font-semibold text-foreground/60">
             By subscribing your are agreeing on terms& polices.
