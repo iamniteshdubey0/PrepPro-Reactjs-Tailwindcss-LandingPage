@@ -10,6 +10,7 @@ import Integrations from "../components/Integration";
 import Tools from "../components/Tools";
 import Summary from "../components/summary";
 import Newsletter from "../components/Newsletter";
+import Footer from "../components/Footer";
 
 const Home = () => {
   return (
@@ -31,6 +32,7 @@ const Home = () => {
       <Summary></Summary>
       <Newsletter> </Newsletter>
       {/* footer */}
+      <Footer></Footer>
     </div>
   );
 };

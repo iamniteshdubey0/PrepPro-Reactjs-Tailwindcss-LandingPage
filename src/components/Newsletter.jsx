@@ -3,8 +3,8 @@ import React from "react";
 
 const Newsletter = () => {
   return (
-    <section className="relative flex flex-col items-center justify-center py-24 px-4 overflow-hidden rounded-4xl">
-      <div className="relative grid grid-cols-1 md:grid-cols-2 z-10 mt-8 text-center px-4 space-y-6">
+    <section className="relative flex flex-col items-center justify-center pt-24 pb-6 px-4 overflow-hidden rounded-4xl">
+      <div className="grid grid-cols-1 md:grid-cols-2 z-10 mt-8 text-center px-4 space-y-6">
         <div className="flex flex-col gap-2 items-start p-2 text-left md:w-2/3">
           <div className="flex flex-col text-2xl font-bold text-primary items-start">
             <Box size={24}></Box>
