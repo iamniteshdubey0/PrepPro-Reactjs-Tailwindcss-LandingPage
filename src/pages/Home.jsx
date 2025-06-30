@@ -11,6 +11,7 @@ import Tools from "../components/Tools";
 import Summary from "../components/summary";
 import Newsletter from "../components/Newsletter";
 import Footer from "../components/Footer";
+import Pricing from "../components/Pricing";
 
 const Home = () => {
   return (
@@ -26,6 +27,7 @@ const Home = () => {
       <WhyUs></WhyUs>
       <Productivity></Productivity>
       <Features></Features>
+      <Pricing></Pricing>
       <Testimonials></Testimonials>
       <Integrations></Integrations>
       <Tools></Tools>

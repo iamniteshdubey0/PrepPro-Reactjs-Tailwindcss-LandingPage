@@ -3,7 +3,9 @@ import {
   BarChart2,
   Box,
   BoxIcon,
+  Building,
   Clock,
+  Gem,
   Github,
   GoalIcon,
   GroupIcon,
@@ -12,6 +14,7 @@ import {
   Lock,
   Microscope,
   Presentation,
+  Rocket,
   ShieldCheck,
   Square,
   Superscript,
@@ -174,6 +177,61 @@ export const FeaturesItems = {
       label: "telegram",
       icon: <Telescope />,
       position: { top: "80%", left: "90%" },
+    },
+  ],
+};
+
+export const PricingItems = {
+  heading: {
+    subTitle: "No Contract,No Surprise fees",
+    title: `Simple, affordable\nTransparent Pricing`,
+  },
+  plans: [
+    {
+      title: "Base",
+      icon: Building,
+      price: 80,
+      description: "For most businesses that want to optimize web queries",
+      features: [
+        "All limited links",
+        "Own analytics platform",
+        "Chat support",
+        "Optimize hashtags",
+        "Unlimited users",
+      ],
+      action: "Downgrade",
+      highlight: false,
+    },
+    {
+      title: "Pro",
+      icon: Rocket,
+      price: 120,
+      description: "For most businesses that want to optimize web queries",
+      features: [
+        "All limited links",
+        "Own analytics platform",
+        "Chat support",
+        "Optimize hashtags",
+        "Unlimited users",
+      ],
+      action: "Upgrade",
+      highlight: true,
+      badge: "Most Popular",
+    },
+    {
+      title: "Enterprise",
+      icon: Gem,
+      price: 260,
+      description: "For most businesses that want to optimize web queries",
+      features: [
+        "All limited links",
+        "Own analytics platform",
+        "Chat support",
+        "Optimize hashtags",
+        "Unlimited users",
+      ],
+      action: "Upgrade",
+      highlight: false,
     },
   ],
 };
@@ -346,7 +404,7 @@ export const FooterItems = {
   ],
 
   rights: {
-    label:"© All Rights Reserved",
+    label: "© All Rights Reserved",
     link: [
       { title: "Privacy Policy", href: "#privacy" },
       { title: "Terms of Service", href: "#terms" },
