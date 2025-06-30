@@ -4,7 +4,7 @@ import { FooterItems } from "../constants/Constant";
 const Footer = () => {
   return (
     <section className="relative pb-12 px-4 overflow-hidden">
-      <div className="grid place-items-center grid-cols-2 md:grid-cols-6 z-10 mt-8 px-12 space-y-4 gap-4 border-t-2 border-b-2 py-12">
+      <div className="grid md:place-items-center grid-cols-2 md:grid-cols-6 z-10 mt-8 md:px-12 px-4 space-y-4 gap-4 border-t-2 border-b-2 py-12">
         {FooterItems.footerLinks.map((item, key) => (
           <div key={key} className="space-y-1 flex flex-col items-start">
             <p className="text-lg font-semibold mb-2 capitalize">
