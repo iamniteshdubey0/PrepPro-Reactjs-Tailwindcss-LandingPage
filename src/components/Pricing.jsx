@@ -5,7 +5,7 @@ import { Check } from "lucide-react";
 const Pricing = () => {
   const [planType, setPlanType] = useState("monthly");
   return (
-    <section className="relative flex flex-col items-center justify-center py-12 px-4 overflow-hidden">
+    <section id="pricing" className="relative flex flex-col items-center justify-center py-12 px-4 overflow-hidden">
       {/* Text Content */}
       <div className="relative z-10 mt-8 text-center px-4">
         <p className="text-xs text-primary font-medium tracking-wide">

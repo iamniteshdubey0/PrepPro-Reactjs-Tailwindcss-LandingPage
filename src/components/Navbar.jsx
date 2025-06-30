@@ -1,11 +1,12 @@
 import { useState } from "react";
 import { cn } from "../lib/utils";
-import { Menu, X } from "lucide-react";
+import { ChevronDown, ChevronRight, Menu, X } from "lucide-react";
 import ToggleTheme from "./ToggleTheme";
 import { NavrbarItems } from "../constants/Constant";
 
 const Navbar = () => {
   const [isMenuOpened, setIsMenuOpened] = useState(false);
+  const [activeIndex, setActiveIndex] = useState(null);
   return (
     <nav
       className={cn(
@@ -26,15 +27,59 @@ const Navbar = () => {
         </a>
 
         {/* Destktop nav */}
-        <div className="hidden md:flex space-x-4 lg:space-x-8 mr-4">
-          {NavrbarItems.navlinks.map((items, key) => (
-            <a
-              key={key}
-              href={items.link}
-              className="font-semibold text-foreground/80 hover:text-primary transition-colors duration-300 capitalize"
-            >
-              {items.label}
-            </a>
+        <div className="hidden md:flex space-x-2 lg:space-x-2 mr-4">
+          {NavrbarItems.navlinks.map((item, key) => (
+            <div key={key} className="relative inline-block text-left">
+              <a
+              href={item.link}
+                onClick={() => setActiveIndex(activeIndex === key ? null : key)}
+                className="flex justify-between gap-1 items-center text-sm font-medium text-foreground px-2 py-2 hover:text-primary transition-all duration-300 cursor-pointer"
+              >
+                {item.label}
+                {item.sublinks && (
+                  <span className="transition-all duration-300">
+                    {activeIndex === key ? (
+                      <ChevronDown size={16} />
+                    ) : (
+                      <ChevronRight size={16} />
+                    )}
+                  </span>
+                )}
+              </a>
+
+              {/* Dropdown */}
+              {activeIndex === key && item.sublinks && (
+                <div className="absolute z-50 mt-2 w-[500px] bg-background border rounded-xl shadow-lg p-6 grid grid-cols-2 gap-4">
+                  {item.sublinks.map((subitem, i) => (
+                    <div
+                      key={i}
+                      className={`flex items-start gap-3 p-2 rounded-lg transition-all duration-300 cursor-pointer ${
+                        subitem.highlight
+                          ? "bg-primary/20 hover:bg-primary/30"
+                          : "hover:bg-primary/20"
+                      }`}
+                    >
+                      <div className="w-16 h-16 rounded-md bg-muted flex items-center justify-center">
+                        {subitem.icon}
+                      </div>
+                      <div>
+                        <p className="text-sm font-semibold flex items-center gap-2">
+                          {subitem.title}
+                          {subitem.badge && (
+                            <span className="text-xs bg-blue-100 text-blue-600 px-2 py-0.5 rounded-full">
+                              {subitem.badge}
+                            </span>
+                          )}
+                        </p>
+                        <p className="text-xs text-muted-foreground mt-0.5">
+                          {subitem.desc}
+                        </p>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              )}
+            </div>
           ))}
         </div>
 
