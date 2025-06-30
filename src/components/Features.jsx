@@ -23,15 +23,19 @@ const Features = () => {
       ></div>
       {/* Icon Arc */}
       <div className="relative z-20 w-full max-w-[600px] h-[180px] flex items-center justify-center">
-        <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-[100px] w-full max-w-[500px] h-[250px] rounded-b-full">
+        <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-[100px] w-full max-w-[500px] h-[250px]">
           {/* Icons manually positioned along arc */}
 
           {FeaturesItems.featuresIcons.map((item, index) => (
             <div
               key={index}
-              className={`absolute top-[${item.position.top}] left-[${item.position.left}] transform -translate-x-1/2 -translate-y-1/2`}
+              className="absolute transform -translate-x-1/2 -translate-y-1/2"
+              style={{
+                top: item.position.top,
+                left: item.position.left,
+              }}
             >
-              <IconBox icon={FeaturesItems.featuresIcons[index].icon} />
+              <IconBox icon={item.icon} />
             </div>
           ))}
         </div>

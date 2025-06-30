@@ -1,18 +1,23 @@
 import {
   Apple,
+  BarChart2,
   Box,
   BoxIcon,
+  Clock,
   Github,
   GoalIcon,
   GroupIcon,
   Instagram,
   Linkedin,
+  Lock,
   Microscope,
   Presentation,
+  ShieldCheck,
   Square,
   Superscript,
   Telescope,
   TrainTrack,
+  TrendingUp,
   Videotape,
 } from "lucide-react";
 
@@ -35,7 +40,7 @@ export const HeroItems = {
     text2: "HR",
     text3: "Platform",
   },
-  desc: "",
+  desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi,accusantium ipsam rerum assumenda magnam autem ipsa saepe evenietfugit hic quos. Deleniti provident quos distinctio?",
   ratings: [
     {
       platform: "LinkedIn",
@@ -228,4 +233,123 @@ export const IntegrationItems = {
     Linkedin,
     Microscope,
   ],
+};
+
+export const ToolsItems = {
+  heading: {
+    subTitle: "Better Together",
+    title: `Every Tool you need to\nPower Strategic HR`,
+  },
+  sidebarItems: [
+    {
+      label: "Performance",
+      icon: ShieldCheck,
+      desc: "Run performance reviews to align employees on where they meet, exceed, or fall short of their roles’ expectations.",
+      content: "Performance details content shown here.",
+    },
+    {
+      label: "Time Tracking",
+      icon: Clock,
+      desc: "Monitor and log working hours effectively.",
+      content: "Time tracking content here.",
+    },
+    {
+      label: "Analytics",
+      icon: BarChart2,
+      desc: "View HR performance metrics and insights.",
+      content: "Analytics content goes here.",
+    },
+    {
+      label: "Grow",
+      icon: TrendingUp,
+      desc: "Help employees develop skills and careers.",
+      content: "Growth tools and learning content.",
+    },
+    {
+      label: "Security",
+      icon: Lock,
+      desc: "Manage access, permissions, and data protection.",
+      content: "Security management section.",
+    },
+  ],
+  Rating: {
+    title: "Communication and Collaboration",
+    desc: "This person drives initiatives that enhance the productivity of our team and company",
+  },
+};
+
+export const SummaryItems = {
+  heading: {
+    subTitle: "HireSphere People Platform",
+    title: `One Platform for your all\nHR needs`,
+  },
+  ratings: [
+    {
+      platform: "LinkedIn",
+      text: "4.2 on LinkedIn",
+      icon: <Linkedin size={16}></Linkedin>,
+    },
+    {
+      platform: "Github",
+      text: "4.5 on Github",
+      icon: <Github size={16}></Github>,
+    },
+  ],
+};
+
+export const FooterItems = {
+  footerLinks: [
+    {
+      title: "Company",
+      link: [
+        { title: "About Us", href: "#about" },
+        { title: "Careers", href: "#careers" },
+        { title: "Blog", href: "#blog" },
+        { title: "Contact", href: "#contact" },
+      ],
+    },
+    {
+      title: "Resources",
+      link: [
+        { title: "Help Center", href: "#help" },
+        { title: "Community", href: "#community" },
+        { title: "Events", href: "#events" },
+        { title: "Webinars", href: "#webinars" },
+      ],
+    },
+    {
+      title: "Solutions",
+      link: [
+        { title: "Recruitment", href: "#recruitment" },
+        { title: "Employee Engagement", href: "#engagement" },
+        { title: "Performance Management", href: "#performance" },
+        { title: "Learning & Development", href: "#learning" },
+      ],
+    },
+    {
+      title: "Platform",
+      link: [
+        { title: "Dashboard", href: "#dashboard" },
+        { title: "Integrations", href: "#integrations" },
+        { title: "Security", href: "#security" },
+        { title: "API Docs", href: "#api" },
+      ],
+    },
+    {
+      title: "Pricing",
+      link: [
+        { title: "Plans & Pricing", href: "#pricing" },
+        { title: "Enterprise", href: "#enterprise" },
+        { title: "Request a Demo", href: "#demo" },
+      ],
+    },
+  ],
+
+  rights: {
+    label:"© All Rights Reserved",
+    link: [
+      { title: "Privacy Policy", href: "#privacy" },
+      { title: "Terms of Service", href: "#terms" },
+    ],
+  },
 };

@@ -1,43 +1,10 @@
-import { BarChart2, Clock, Lock, ShieldCheck, TrendingUp } from "lucide-react";
 import React, { useState } from "react";
-
-const sidebarItems = [
-  {
-    label: "Performance",
-    icon: ShieldCheck,
-    desc: "Run performance reviews to align employees on where they meet, exceed, or fall short of their roles’ expectations.",
-    content: "Performance details content shown here.",
-  },
-  {
-    label: "Time Tracking",
-    icon: Clock,
-    desc: "Monitor and log working hours effectively.",
-    content: "Time tracking content here.",
-  },
-  {
-    label: "Analytics",
-    icon: BarChart2,
-    desc: "View HR performance metrics and insights.",
-    content: "Analytics content goes here.",
-  },
-  {
-    label: "Grow",
-    icon: TrendingUp,
-    desc: "Help employees develop skills and careers.",
-    content: "Growth tools and learning content.",
-  },
-  {
-    label: "Security",
-    icon: Lock,
-    desc: "Manage access, permissions, and data protection.",
-    content: "Security management section.",
-  },
-];
+import { ToolsItems } from "../constants/Constant";
 
 const SidebarItem = ({ icon: Icon, label, desc, active, onClick }) => (
   <div
     onClick={onClick}
-    className={`p-4 rounded-xl cursor-pointer transition-all ${
+    className={`p-4 font-medium rounded-xl cursor-pointer transition-all ${
       active
         ? "bg-foreground/10 text-foreground font-medium"
         : "hover:bg-muted/50 text-foreground/80"
@@ -86,23 +53,27 @@ const RatingRow = ({ name, role = "SELF", activeIndex = 3, avatar }) => (
 
 const Tools = () => {
   const [activeIndex, setActiveIndex] = useState(0);
-  const activeItem = sidebarItems[activeIndex];
+  const activeItem = ToolsItems.sidebarItems[activeIndex];
 
   return (
     <section className="relative flex flex-col items-center justify-center py-12 px-4 overflow-hidden space-y-24">
       {/* Text Content */}
       <div className="relative z-10 mt-8 text-center px-4">
         <p className="text-xs text-primary font-medium tracking-wide">
-          Better Together
+          {ToolsItems.heading.subTitle}
         </p>
         <h2 className="text-2xl md:text-3xl font-semibold text-foreground mt-2">
-          Every Tool you need to <br />
-          Power Strategic HR
+          {ToolsItems.heading.title.split("\n").map((line, i) => (
+            <React.Fragment key={i}>
+              {line}
+              <br></br>
+            </React.Fragment>
+          ))}
         </h2>
       </div>
       <div className="grid grid-cols-1 md:grid-cols-2 items-start gap-6 w-full max-w-5xl">
         <div className="space-y-2">
-          {sidebarItems.map((item, i) => (
+          {ToolsItems.sidebarItems.map((item, i) => (
             <SidebarItem
               key={i}
               icon={item.icon}
@@ -115,11 +86,10 @@ const Tools = () => {
         </div>
         <div className="flex-1 rounded-xl bg-gradient-to-br from-primary/40 to-primary-30 p-6 space-y-4">
           <p className="text-xs font-semibold text-muted-foreground uppercase">
-            Communication and Collaboration
+            {ToolsItems.Rating.title}
           </p>
           <h1 className="text-lg font-bold text-foreground max-w-lg">
-            This person drives initiatives that enhance the productivity of our
-            team and company
+            {ToolsItems.Rating.desc}
           </h1>
 
           <div className="space-y-4 mt-6">

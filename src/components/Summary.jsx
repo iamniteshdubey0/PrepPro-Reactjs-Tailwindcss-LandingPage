@@ -1,5 +1,6 @@
 import { Inspect } from "lucide-react";
 import React from "react";
+import { SummaryItems } from "../constants/Constant";
 
 const Summary = () => {
   return (
@@ -13,11 +14,15 @@ const Summary = () => {
       </div>
       <div className="relative z-10 mt-8 text-center px-4 space-y-6">
         <p className="text-xs text-primary font-medium tracking-wide">
-          HireSphere People Platform
+          {SummaryItems.heading.subTitle}
         </p>
         <h2 className="text-2xl md:text-3xl font-semibold text-foreground mt-2">
-          One Platform for your all <br />
-          HR needs
+          {SummaryItems.heading.title.split("\n").map((line, i) => (
+            <React.Fragment key={i}>
+              {line}
+              <br></br>
+            </React.Fragment>
+          ))}
         </h2>
         <div className=" pt-4 opacity-0 animate-fade-in-delay-4">
           <a href="#projects" className="solid-button py-4">
@@ -25,19 +30,14 @@ const Summary = () => {
           </a>
         </div>
         <div className="flex justify-center mt-12 p-2 space-x-8">
-          <div className="flex items-center space-x-2 text-foreground/60">
-            <span className="text-sm font-semibold">4.2 on LinkedIn</span>
-            <span className="p-2 bg-primary/10 rounded-full">
-              <Inspect size={16}></Inspect>
-            </span>
-          </div>
-
-          <div className="flex items-center space-x-2 text-foreground/60">
-            <span className="text-sm font-semibold">4.2 on LinkedIn</span>
-            <span className="p-2 bg-primary/10 rounded-full">
-              <Inspect size={16}></Inspect>
-            </span>
-          </div>
+          {SummaryItems.ratings.map((item, key) => (
+            <div key={key} className="flex items-center space-x-2 text-foreground/60">
+              <span className="text-sm font-semibold">{item.text}</span>
+              <span className="p-2 bg-primary/10 rounded-full flex justify-center items-center">
+                {item.icon}
+              </span>
+            </div>
+          ))}
         </div>
       </div>
     </section>

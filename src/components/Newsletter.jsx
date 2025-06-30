@@ -1,5 +1,6 @@
 import { Box } from "lucide-react";
 import React from "react";
+import { NavrbarItems, HeroItems } from "../constants/Constant";
 
 const Newsletter = () => {
   return (
@@ -7,14 +8,12 @@ const Newsletter = () => {
       <div className="grid grid-cols-1 md:grid-cols-2 z-10 mt-8 text-center px-4 space-y-6">
         <div className="flex flex-col gap-2 items-start p-2 text-left md:w-2/3">
           <div className="flex flex-col text-2xl font-bold text-primary items-start">
-            <Box size={24}></Box>
-            <p className="">PrepPro</p>
+            {NavrbarItems.brand.logo}
+            <p className="">{NavrbarItems.brand.name}</p>
           </div>
 
           <p className="text-sm md:text-md font-semibold text-foreground/60 max-w-xl mx-auto opacity-0 animate-fade-in-delay-3">
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ex optio
-            fugit eos porro rem asperiores illo cupiditate esse eveniet expedita
-            aut, nostrum adipisci quo corporis unde maxime amet
+            {HeroItems.desc}
           </p>
         </div>
 
