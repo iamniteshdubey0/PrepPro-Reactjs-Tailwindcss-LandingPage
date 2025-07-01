@@ -8,7 +8,7 @@ import Features from "../components/Features";
 import Testimonials from "../components/Testimonials";
 import Integrations from "../components/Integration";
 import Tools from "../components/Tools";
-import Summary from "../components/summary";
+import SummarySection from "../components/SummarySection";
 import Newsletter from "../components/Newsletter";
 import Footer from "../components/Footer";
 import Pricing from "../components/Pricing";
@@ -31,7 +31,7 @@ const Home = () => {
       <Testimonials></Testimonials>
       <Integrations></Integrations>
       <Tools></Tools>
-      <Summary></Summary>
+      <SummarySection></SummarySection>
       <Newsletter> </Newsletter>
       {/* footer */}
       <Footer></Footer>

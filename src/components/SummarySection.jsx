@@ -1,8 +1,7 @@
-import { Inspect } from "lucide-react";
 import React from "react";
 import { SummaryItems } from "../constants/Constant";
 
-const Summary = () => {
+const SummarySection = () => {
   return (
     <section className="relative flex flex-col items-center justify-center py-24 px-4 overflow-hidden rounded-4xl">
       {/* Text Content */}
@@ -44,4 +43,4 @@ const Summary = () => {
   );
 };
 
-export default Summary;
+export default SummarySection;
