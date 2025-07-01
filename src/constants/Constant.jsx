@@ -9,6 +9,7 @@ import {
   Briefcase,
   Building,
   Building2,
+  Calendar,
   Clock,
   Code2,
   FileText,
@@ -16,29 +17,34 @@ import {
   Github,
   GoalIcon,
   GroupIcon,
+  HardDriveDownload,
   Instagram,
   LifeBuoy,
   Linkedin,
   Lock,
   Microscope,
   Newspaper,
+  NotebookIcon,
   Presentation,
   Rocket,
   Shield,
   ShieldCheck,
+  Slack,
   Square,
   Superscript,
   Telescope,
   TrainTrack,
+  Trello,
   TrendingUp,
   Users,
   Videotape,
+  ZoomIn,
 } from "lucide-react";
 
 export const NavrbarItems = {
   brand: {
-    logo: <Box size={28}></Box>,
-    name: "Prep-Pro",
+    logo: <BookOpen size={28} />, // Best icon for learning/training
+    name: "PrepPro",
   },
   navlinks: [
     {
@@ -48,39 +54,39 @@ export const NavrbarItems = {
         {
           icon: <Bell className="text-orange-500" size={18} />,
           title: "Notifications",
-          desc: "Stay informed with real-time alerts.",
+          desc: "Real-time updates on your training sessions.",
           badge: "New",
           link: "#notifications",
         },
         {
           icon: <BarChart3 className="text-green-600" size={18} />,
           title: "Analytics",
-          desc: "Measure success with actionable insights.",
+          desc: "Track your performance with insights.",
           link: "#analytics",
         },
         {
           icon: <Code2 className="text-purple-500" size={18} />,
-          title: "Integrations",
-          desc: "Connect your favorite tools seamlessly.",
-          link: "#integrations",
+          title: "Fields & Domains",
+          desc: "Explore training options across various fields.",
+          link: "#fields",
         },
         {
           icon: <Shield className="text-blue-500" size={18} />,
-          title: "Security",
-          desc: "Ensure enterprise-grade protection.",
+          title: "Secure Learning",
+          desc: "Privacy-first, secure training sessions.",
           link: "#security",
         },
         {
           icon: <LifeBuoy className="text-red-500" size={18} />,
-          title: "Support",
-          desc: "24/7 help from our dedicated team.",
+          title: "24/7 Support",
+          desc: "Get help whenever you need it.",
           link: "#support",
         },
         {
           icon: <FileText className="text-sky-500" size={18} />,
           title: "Documentation",
-          desc: "Everything you need to get started.",
-          link: "#documentation",
+          desc: "Guides to get started quickly.",
+          link: "#docs",
         },
       ],
     },
@@ -90,26 +96,26 @@ export const NavrbarItems = {
       sublinks: [
         {
           icon: <BookOpen className="text-indigo-500" size={18} />,
-          title: "Guides",
-          desc: "Step-by-step instructions for success.",
+          title: "Interview Guides",
+          desc: "Master interview formats and questions.",
           link: "#guides",
         },
         {
           icon: <Newspaper className="text-rose-500" size={18} />,
           title: "Blog",
-          desc: "Expert insights and company updates.",
+          desc: "Insights from HR and domain experts.",
           link: "#blog",
         },
         {
           icon: <Users className="text-amber-500" size={18} />,
-          title: "Case Studies",
-          desc: "Learn how companies achieve results.",
-          link: "#case-studies",
+          title: "Success Stories",
+          desc: "See how PrepPro helped others succeed.",
+          link: "#stories",
         },
         {
           icon: <LifeBuoy className="text-teal-500" size={18} />,
-          title: "Events",
-          desc: "Join live sessions and webinars.",
+          title: "Events & Webinars",
+          desc: "Live workshops and learning events.",
           link: "#events",
         },
       ],
@@ -120,21 +126,21 @@ export const NavrbarItems = {
       sublinks: [
         {
           icon: <Briefcase className="text-cyan-600" size={18} />,
-          title: "Startups",
-          desc: "Scale quickly with smart hiring.",
-          link: "#startups",
+          title: "Corporate Training",
+          desc: "Upskill your team with mock HR sessions.",
+          link: "#corporate",
         },
         {
           icon: <Building2 className="text-fuchsia-600" size={18} />,
-          title: "Enterprise",
-          desc: "Tools designed for large teams.",
-          link: "#enterprise",
+          title: "University Programs",
+          desc: "Enable students to get job-ready.",
+          link: "#campus",
         },
         {
           icon: <Users className="text-emerald-600" size={18} />,
-          title: "Agencies",
-          desc: "Optimize client hiring processes.",
-          link: "#agencies",
+          title: "Freelancers & Creators",
+          desc: "Practice domain-specific interview skills.",
+          link: "#freelancers",
         },
       ],
     },
@@ -148,34 +154,34 @@ export const NavrbarItems = {
 export const HeroItems = {
   heading: {
     text1: "The ",
-    text2: "HR",
-    text3: "Platform",
+    text2: "Interview",
+    text3: "Training Platform",
   },
-  desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi,accusantium ipsam rerum assumenda magnam autem ipsa saepe evenietfugit hic quos. Deleniti provident quos distinctio?",
+  desc: "PrepPro helps students, professionals, and companies train and prepare for interviews and upskill their workforce with AI-driven or real HR expert sessions.",
   ratings: [
     {
       platform: "LinkedIn",
-      text: "4.2 on LinkedIn",
-      icon: <Linkedin size={16}></Linkedin>,
+      text: "4.8 on LinkedIn",
+      icon: <Linkedin size={16} />,
     },
     {
       platform: "Github",
-      text: "4.5 on Github",
-      icon: <Github size={16}></Github>,
+      text: "4.7 on GitHub",
+      icon: <Github size={16} />,
     },
   ],
   images: [
     {
       position: "left",
-      url: "https://randomuser.me/api/portraits/men/12.jpg",
+      url: "https://randomuser.me/api/portraits/men/20.jpg",
     },
     {
       position: "center",
-      url: "https://randomuser.me/api/portraits/men/32.jpg",
+      url: "https://randomuser.me/api/portraits/women/32.jpg",
     },
     {
       position: "right",
-      url: "https://randomuser.me/api/portraits/women/45.jpg",
+      url: "https://randomuser.me/api/portraits/men/44.jpg",
     },
   ],
 };
@@ -194,28 +200,28 @@ export const ClientsItems = {
 
 export const WhyusItems = {
   heading: {
-    title: `why\nChoose Us`,
-    desc: "Lorem ipsum dolor sit amet consectetur, adipisicing elit hjhg fbhewfyuewg fewc dcfhgu efge. Fuga Lorem ipsum dolor sit amet consectetur, adipisicing elit. Fuga",
+    title: `Why\nChoose Us`,
+    desc: "PrepPro is trusted by professionals and organizations to enhance interview skills and team capabilities using real scenarios and expert guidance.",
   },
   feats: [
     {
       value: "700+",
-      label: "Students Cracked Interview",
+      label: "Interviews Cracked by Users",
       color: "from-primary/40 to-primary/30",
     },
     {
-      value: "50+",
-      label: "Organizational Trust Us",
+      value: "100+",
+      label: "Organizations Trust Us",
       color: "from-white/10 to-black/20",
     },
     {
       value: "5000+",
-      label: "Hrs of practise",
+      label: "Hours of Practical Sessions",
       color: "from-primary/30 to-primary/20",
     },
     {
-      value: "40+",
-      label: "Proffesinals personal",
+      value: "60+",
+      label: "Professional Interviewers",
       color: "from-white/10 to-black/20",
     },
   ],
@@ -223,66 +229,66 @@ export const WhyusItems = {
 
 export const ProductivityItems = {
   heading: {
-    subTitle: "Productivity Task",
-    title: `Empowererd Managers,\nHigher Performing Teams`,
-    desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi,accusantium ipsam rerum assumenda magnam autem ipsa saepe evenietfugit hic quos. Deleniti provident quos distinctio?",
+    subTitle: "Productivity Tools",
+    title: `Empowered Managers,\nHigher Performing Teams`,
+    desc: "PrepPro helps managers stay aligned on goals, track outcomes, and reduce attrition by enabling structured performance practices.",
   },
   cards: {
     left: {
-      title: "OKRs & Golas",
-      desc: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Reiciendis earum atque, accusantium doloribus officia perferendis!",
+      title: "OKRs & Goals",
+      desc: "Set clear objectives and measure outcomes to align teams toward success.",
       imgUrl: "",
     },
     topRight: {
-      title: "Analytics",
-      desc: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Reiciendis earum atque, accusantium doloribus officia perferendis!",
+      title: "Smart Analytics",
+      desc: "Visualize hiring funnels, practice outcomes, and learning curves with real-time dashboards.",
       imgUrl: "",
     },
     bottomRight1: {
-      title: "OKRs & Golas",
-      desc: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Reiciendis earum atque, accusantium doloribus officia perferendis!",
+      title: "AI Feedback Loops",
+      desc: "Receive actionable feedback after every interview simulation from PrepPro’s AI or real experts.",
       imgUrl: "",
     },
     bottomRight2: {
-      title: "Reduced Turnover 28%",
-      icon: <BoxIcon size={66}></BoxIcon>,
+      title: "Reduced Turnover by 28%",
+      icon: <BoxIcon size={66} />,
     },
   },
 };
 
 export const FeaturesItems = {
   heading: {
-    subTitle: "Features",
+    subTitle: "Key Features",
     title: `Build An Operationally\nExcellent Company`,
   },
   featuresIcons: [
     {
-      label: "telegram",
-      icon: <Superscript />,
+      label: "AI Interviewer",
+      icon: <Superscript />, // Replace with real icon
       position: { top: "80%", left: "10%" },
     },
     {
-      label: "telegram",
+      label: "HR Experts",
       icon: <Presentation />,
       position: { top: "55%", left: "25%" },
     },
     {
-      label: "telegram",
+      label: "Video Interviews",
       icon: <Videotape />,
       position: { top: "40%", left: "42%" },
     },
     {
-      label: "telegram",
+      label: "Team Collaboration",
       icon: <GroupIcon />,
       position: { top: "40%", left: "58%" },
     },
     {
-      label: "telegram",
+      label: "Structured Q&A",
       icon: <Square />,
       position: { top: "55%", left: "75%" },
     },
     {
-      label: "telegram",
+      label: "Future-Ready Skills",
       icon: <Telescope />,
       position: { top: "80%", left: "90%" },
     },
@@ -291,36 +297,36 @@ export const FeaturesItems = {
 
 export const PricingItems = {
   heading: {
-    subTitle: "No Contract,No Surprise fees",
-    title: `Simple, affordable\nTransparent Pricing`,
+    subTitle: "No Contracts, No Hidden Fees",
+    title: `Simple, Affordable\nTransparent Pricing`,
   },
   plans: [
     {
-      title: "Base",
+      title: "Student Plan",
       icon: Building,
-      price: 80,
-      description: "For most businesses that want to optimize web queries",
+      price: 49,
+      description: "Perfect for job-seeking students preparing for placements and internships.",
       features: [
-        "All limited links",
-        "Own analytics platform",
-        "Chat support",
-        "Optimize hashtags",
-        "Unlimited users",
+        "AI Mock Interviews",
+        "Practice Feedback",
+        "Resume Tips",
+        "Domain-wise Q&A",
+        "Email Support",
       ],
-      action: "Downgrade",
+      action: "Enroll",
       highlight: false,
     },
     {
       title: "Pro",
       icon: Rocket,
-      price: 120,
-      description: "For most businesses that want to optimize web queries",
+      price: 119,
+      description: "For working professionals preparing for switches or internal assessments.",
       features: [
-        "All limited links",
-        "Own analytics platform",
-        "Chat support",
-        "Optimize hashtags",
-        "Unlimited users",
+        "Live HR Interviews",
+        "Priority Feedback",
+        "Project Review Help",
+        "Real Time Dashboard",
+        "24/7 Support",
       ],
       action: "Upgrade",
       highlight: true,
@@ -329,16 +335,16 @@ export const PricingItems = {
     {
       title: "Enterprise",
       icon: Gem,
-      price: 260,
-      description: "For most businesses that want to optimize web queries",
+      price: 249,
+      description: "Tailored training platform for growing teams and corporate upskilling.",
       features: [
-        "All limited links",
-        "Own analytics platform",
-        "Chat support",
-        "Optimize hashtags",
-        "Unlimited users",
+        "Team Management",
+        "Training Reports",
+        "Custom Interview Fields",
+        "Dedicated Coach",
+        "Onboarding Assistance",
       ],
-      action: "Upgrade",
+      action: "Request Demo",
       highlight: false,
     },
   ],
@@ -346,8 +352,8 @@ export const PricingItems = {
 
 export const TestimonialsItems = {
   heading: {
-    subTitle: "Prep-Pro People Platform",
-    title: `Built to Power Your Entire\nWorkspace`,
+    subTitle: "Trusted By Top Professionals",
+    title: `Built to Power Your Entire\nInterview Journey`,
   },
   reviews: [
     {
@@ -385,80 +391,82 @@ export const TestimonialsItems = {
 
 export const IntegrationItems = {
   heading: {
-    subTitle: "Vast Options",
-    title: `Seamless Integrations\nWith Your Entire Tech Stack`,
+    subTitle: "Vast Compatibility",
+    title: "Seamless Integrations\nWith Your Favorite Tools",
   },
   icons: [
-    Apple,
-    Box,
-    BoxIcon,
-    Github,
-    GoalIcon,
-    GroupIcon,
-    Instagram,
-    Linkedin,
-    Microscope,
+    Github,          // Developers
+    Linkedin,        // Professional hiring
+    ZoomIn,            // Live interview/video sessions
+    NotebookIcon,          // Training content & documentation
+    Slack,           // Team communication
+    HardDriveDownload,     // Resource sharing & content upload
+    Instagram,       // For content creation & marketing profiles
+    Trello,          // Task & workflow tracking
+    Calendar,        // Scheduling mock interviews or training
   ],
 };
 
+
 export const ToolsItems = {
   heading: {
-    subTitle: "Better Together",
-    title: `Every Tool you need to\nPower Strategic HR`,
+    subTitle: "Built For Impact",
+    title: "Every Tool You Need to\nPower Skillful Teams",
   },
   sidebarItems: [
     {
-      label: "Performance",
+      label: "Performance Reviews",
       icon: ShieldCheck,
-      desc: "Run performance reviews to align employees on where they meet, exceed, or fall short of their roles’ expectations.",
-      content: "Performance details content shown here.",
+      desc: "Set goals, assess progress, and align outcomes with team objectives.",
+      content: "Detailed review modules for team and personal growth tracking.",
     },
     {
       label: "Time Tracking",
       icon: Clock,
-      desc: "Monitor and log working hours effectively.",
-      content: "Time tracking content here.",
+      desc: "Track learning, interview practice, and task durations.",
+      content: "Monitor how much time users spend preparing or training.",
     },
     {
-      label: "Analytics",
+      label: "Interview Analytics",
       icon: BarChart2,
-      desc: "View HR performance metrics and insights.",
-      content: "Analytics content goes here.",
+      desc: "Insights from mock interviews and user progress data.",
+      content: "Measure mock interview scores, behavioral traits, and AI feedback.",
     },
     {
-      label: "Grow",
+      label: "Learning Paths",
       icon: TrendingUp,
-      desc: "Help employees develop skills and careers.",
-      content: "Growth tools and learning content.",
+      desc: "Custom roadmaps for various roles like SDE, Banking, or Content.",
+      content: "Curated preparation tracks with checkpoints and certifications.",
     },
     {
-      label: "Security",
+      label: "Access & Privacy",
       icon: Lock,
-      desc: "Manage access, permissions, and data protection.",
-      content: "Security management section.",
+      desc: "Secure platform access and custom role-based permissions.",
+      content: "Ensure HRs, candidates, and trainers see only what's relevant.",
     },
   ],
   Rating: {
-    title: "Communication and Collaboration",
-    desc: "This person drives initiatives that enhance the productivity of our team and company",
+    title: "Candidate Engagement",
+    desc: "Keep users engaged and improving with insights, gamification, and timely feedback.",
   },
 };
 
+
 export const SummaryItems = {
   heading: {
-    subTitle: "HireSphere People Platform",
-    title: `One Platform for your all\nHR needs`,
+    subTitle: "PrepPro People Platform",
+    title: `One Platform for All Your\nCareer Prep Needs`,
   },
   ratings: [
     {
       platform: "LinkedIn",
-      text: "4.2 on LinkedIn",
-      icon: <Linkedin size={16}></Linkedin>,
+      text: "4.8 on LinkedIn",
+      icon: <Linkedin size={16} />,
     },
     {
-      platform: "Github",
-      text: "4.5 on Github",
-      icon: <Github size={16}></Github>,
+      platform: "GitHub",
+      text: "4.7 on GitHub",
+      icon: <Github size={16} />,
     },
   ],
 };
@@ -468,54 +476,55 @@ export const FooterItems = {
     {
       title: "Company",
       link: [
-        { title: "About Us", href: "#about" },
+        { title: "About PrepPro", href: "#about" },
+        { title: "Our Mission", href: "#mission" },
         { title: "Careers", href: "#careers" },
-        { title: "Blog", href: "#blog" },
-        { title: "Contact", href: "#contact" },
+        { title: "Contact Us", href: "#contact" },
       ],
     },
     {
       title: "Resources",
       link: [
         { title: "Help Center", href: "#help" },
-        { title: "Community", href: "#community" },
-        { title: "Events", href: "#events" },
-        { title: "Webinars", href: "#webinars" },
+        { title: "Community Forum", href: "#community" },
+        { title: "Webinars & Events", href: "#events" },
+        { title: "Blog & Insights", href: "#blog" },
       ],
     },
     {
       title: "Solutions",
       link: [
-        { title: "Recruitment", href: "#recruitment" },
-        { title: "Employee Engagement", href: "#engagement" },
-        { title: "Performance Management", href: "#performance" },
-        { title: "Learning & Development", href: "#learning" },
+        { title: "Student Training", href: "#students" },
+        { title: "Corporate Training", href: "#corporate" },
+        { title: "Mock Interviews", href: "#mock-interviews" },
+        { title: "Skill Development", href: "#skills" },
       ],
     },
     {
       title: "Platform",
       link: [
         { title: "Dashboard", href: "#dashboard" },
-        { title: "Integrations", href: "#integrations" },
-        { title: "Security", href: "#security" },
-        { title: "API Docs", href: "#api" },
+        { title: "AI Companion", href: "#ai-companion" },
+        { title: "Live Interviews", href: "#live-interviews" },
+        { title: "Security & Privacy", href: "#security" },
       ],
     },
     {
       title: "Pricing",
       link: [
         { title: "Plans & Pricing", href: "#pricing" },
-        { title: "Enterprise", href: "#enterprise" },
+        { title: "For Organizations", href: "#enterprise" },
         { title: "Request a Demo", href: "#demo" },
       ],
     },
   ],
 
   rights: {
-    label: "© All Rights Reserved",
+    label: "© 2025 PrepPro. All rights reserved.",
     link: [
       { title: "Privacy Policy", href: "#privacy" },
       { title: "Terms of Service", href: "#terms" },
+      { title: "Cookies Policy", href: "#cookies" },
     ],
   },
 };
