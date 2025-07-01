@@ -84,7 +84,7 @@ const Navbar = () => {
         </div>
 
         <div className="hidden md:flex space-x-4">
-          <button className="outlined-button">Login</button>
+          <a href="/auth" className="outlined-button text-md">Login</a>
           <button className="solid-button">Request a Demo</button>
           <ToggleTheme></ToggleTheme>
         </div>
@@ -167,7 +167,7 @@ const Navbar = () => {
           </div>
 
           <div className="absolute bottom-10 flex space-x-4">
-            <button className="outlined-button text-md">Login</button>
+            <a href="/auth" className="outlined-button text-md">Login</a>
             <button className="solid-button text-md">Request a Demo</button>
             <ToggleTheme></ToggleTheme>
           </div>
